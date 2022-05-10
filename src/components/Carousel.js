@@ -5,7 +5,6 @@ import "react-multi-carousel/lib/styles.css";
 
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 5,
     partialVisibilityGutter: 40,
@@ -27,39 +26,36 @@ const responsive = {
   },
 };
 
-const MyCarousel = ({ data }) => {
-  console.log("Data ======", data);
-  return (
-    <div className="square_slider has-text-centered main-section">
-      <Carousel
-        responsive={responsive}
-        showDots
-        swipeable
-        draggable
-        keyBoardControl
-        minimumTouchDrag={80}
-        autoPlay={false}
-        renderButtonGroupOutside={false}
-        renderDotsOutside
-      >
-        {data.images.map(({ image, title, subtitle }, index) => (
-          <div key={index} className="carousel-item">
-            <Image
-              alt={image.url.alt}
-              src={image.url}
-              width={500}
-              height={500}
-              className="carousel-image"
-            />
-            <div className="carousel-content">
-              <h4 className="carousel-title">{title} </h4>
-              <p className="carousel-subtitle">{subtitle} </p>
-            </div>
+const MyCarousel = ({ data }) => (
+  <div className="square_slider has-text-centered main-section">
+    <Carousel
+      responsive={responsive}
+      showDots
+      swipeable
+      draggable
+      keyBoardControl
+      minimumTouchDrag={80}
+      autoPlay={false}
+      renderButtonGroupOutside={false}
+      renderDotsOutside
+    >
+      {data.images.map(({ image, title, subtitle }, index) => (
+        <div key={index} className="carousel-item">
+          <Image
+            alt={image.url.alt}
+            src={image.url}
+            width={500}
+            height={500}
+            className="carousel-image"
+          />
+          <div className="carousel-content">
+            <h4 className="carousel-title">{title} </h4>
+            <p className="carousel-subtitle">{subtitle} </p>
           </div>
-        ))}
-      </Carousel>
-    </div>
-  );
-};
+        </div>
+      ))}
+    </Carousel>
+  </div>
+);
 
 export default MyCarousel;

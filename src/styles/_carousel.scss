@@ -41,3 +41,12 @@
     transform: translateY(-100%);
   }
 }
+
+.react-multi-carousel-dot button {
+  border-color: transparent !important;
+  background-color: #333;
+}
+
+.react-multi-carousel-dot--active button {
+  background-color: #ffe100 !important;
+}
