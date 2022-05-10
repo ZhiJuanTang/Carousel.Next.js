@@ -11,6 +11,7 @@ export default function Home({ page }) {
             <Modules key={index} module={module} />
           ))}
       </main>
+      {console.log(page[0].acf.modules)}
     </>
   );
 }
@@ -19,6 +20,8 @@ export async function getStaticProps() {
   // Gets page data from API and returns it as props to the Home component
   const page = await getPage("home");
   const options = await getOptions();
+  // console.log(page[0].acf.modules[0].warnings[0].icon.ID);
+  // console.log(page[0].acf.modules[5].images);
 
   return {
     props: {
