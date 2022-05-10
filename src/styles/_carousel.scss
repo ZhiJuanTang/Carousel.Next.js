@@ -1,0 +1,52 @@
+.square_slider {
+  position: relative;
+  padding-bottom: 30px;
+  background-color: #132634;
+}
+
+.carousel-image {
+  object-fit: cover;
+}
+
+.carousel-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  transform: translateY(0%);
+  text-align: left;
+  background: rgba(19, 38, 52, 0.5);
+  transition: transform 0.5s;
+}
+
+.carousel-item {
+  padding: 0 10px;
+}
+
+.carousel-title {
+  color: #ffe100;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.carousel-subtitle {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.carousel-item:hover {
+  .carousel-content {
+    transform: translateY(-100%);
+  }
+}
+
+.react-multi-carousel-dot button {
+  border-color: transparent !important;
+  background-color: #333;
+}
+
+.react-multi-carousel-dot--active button {
+  background-color: #ffe100 !important;
+}

@@ -4,14 +4,12 @@ import { getOptions } from "../hooks/getOptions";
 
 export default function Home({ page }) {
   return (
-    <>
-      <main id="home">
-        {page[0].acf?.modules &&
-          page[0].acf.modules.map((module, index) => (
-            <Modules key={index} module={module} />
-          ))}
-      </main>
-    </>
+    <main id="home">
+      {page[0].acf?.modules &&
+        page[0].acf.modules.map((module, index) => (
+          <Modules key={index} module={module} />
+        ))}
+    </main>
   );
 }
 
